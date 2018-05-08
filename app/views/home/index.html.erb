@@ -1,0 +1,23 @@
+
+<div class="container">
+<ul>
+  <% if connect_signed_in? %>
+  <li>
+    <%= link_to "Sign Out", destroy_connect_session_path, method: :delete %>
+  </li>
+  <li>
+    <%= current_connect.email %>
+  </li>
+  <li>
+    <%= link_to "Edit Account", edit_connect_registration_path %>
+  </li>
+  <% else %>
+    <li>
+      <%= link_to "sign in", new_connect_session_path %>
+    </li>
+    <li>
+      <%= link_to "sign UP", new_connect_registration_path %>
+    </li>
+    <% end %>
+</ul>
+</div>
