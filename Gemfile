@@ -43,6 +43,7 @@ end
 group :production do
   gem 'pg', '0.20.0'
 end
+gem 'stripe'
 gem 'devise'
 gem 'bootsnap', '>= 1.1.0', require: false
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
