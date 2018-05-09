@@ -3,7 +3,7 @@
 <div class="container">
 <ul>
   <% if connect_signed_in? %>
-  <h1>Hello <%= current_connect.nickname %></h1>
+  <h1>Hello <%= current_connect.nickname.capitalize %></h1>
   <p id="notice"><%= notice %></p>
 
   <h1>Events de la <em>Hype</em> </h1>
