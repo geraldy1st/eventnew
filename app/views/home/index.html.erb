@@ -1,7 +1,45 @@
 
+
 <div class="container">
 <ul>
   <% if connect_signed_in? %>
+  <h1>Hello <%= current_connect.nickname %></h1>
+  <p id="notice"><%= notice %></p>
+
+  <h1>Events de la <em>Hype</em> </h1>
+
+  <table class="tablehype">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Date</th>
+        <th>Place</th>
+        <th>Prix</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @events.each do |event| %>
+        <tr>
+          <td><%= event.name %></td>
+          <td><%= event.description %></td>
+          <td><%= event.date %></td>
+          <td><%= event.place %></td>
+          <td><%= event.prix %></td>
+          <td><%= link_to 'Show', event %></td>
+          <td><%= link_to 'Edit', edit_event_path(event) %></td>
+          <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <button type="button" class="btn btn-default"><%= link_to 'New Event', new_event_path %></button>
+
   <li>
     <%= link_to "Sign Out", destroy_connect_session_path, method: :delete %>
   </li>

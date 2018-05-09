@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
    	<link href="https://fonts.googleapis.com/css?family=Teko:400,700" rel="stylesheet">
    	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  
+
 
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -20,6 +20,16 @@
   </head>
 
   <body>
+    <nav class="site-header sticky-top py-1">
+      <div class="container d-flex flex-column flex-md-row justify-content-between">
+        <a class="py-2 logoevent" href="<%= root_path %>">
+        <img src="http://www.stickpng.com/assets/images/5841c48ba6515b1e0ad75aa4.png" alt="logo">
+        </a>
+        <a class="py-2 d-none d-md-inline-block" href="/">Home</a>
+        <a class="py-2 d-none d-md-inline-block" href="/events">Events</a>
+        <a class="py-2 d-none d-md-inline-block" href="/">Contact</a>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>
